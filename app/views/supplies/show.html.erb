@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @supply.name %>
+</p>
+
+<p>
+  <strong>Order date:</strong>
+  <%= @supply.order_date %>
+</p>
+
+<p>
+  <strong>Amount ordered:</strong>
+  <%= @supply.amount_ordered %>
+</p>
+
+<p>
+  <strong>Current amount:</strong>
+  <%= @supply.current_amount %>
+</p>
+
+<p>
+  <strong>Clinic:</strong>
+  <%= @supply.clinic %>
+</p>
+
+<%= link_to 'Edit', edit_supply_path(@supply) %> |
+<%= link_to 'Back', supplies_path %>

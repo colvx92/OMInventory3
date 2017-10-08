@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  order_date: 2017-10-08
+  amount_ordered: 1
+  current_amount: 1
+  clinic: one
+
+two:
+  name: MyString
+  order_date: 2017-10-08
+  amount_ordered: 1
+  current_amount: 1
+  clinic: two

@@ -1,0 +1,32 @@
+<%= form_with(model: usage, local: true) do |form| %>
+  <% if usage.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(usage.errors.count, "error") %> prohibited this usage from being saved:</h2>
+
+      <ul>
+      <% usage.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :amount_used %>
+    <%= form.number_field :amount_used, id: :usage_amount_used %>
+  </div>
+
+  <div class="field">
+    <%= form.label :appointment_id %>
+    <%= form.text_field :appointment_id, id: :usage_appointment_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :supply_id %>
+    <%= form.text_field :supply_id, id: :usage_supply_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

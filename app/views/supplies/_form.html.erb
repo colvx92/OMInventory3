@@ -1,0 +1,42 @@
+<%= form_with(model: supply, local: true) do |form| %>
+  <% if supply.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(supply.errors.count, "error") %> prohibited this supply from being saved:</h2>
+
+      <ul>
+      <% supply.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :supply_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :order_date %>
+    <%= form.date_select :order_date, id: :supply_order_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :amount_ordered %>
+    <%= form.number_field :amount_ordered, id: :supply_amount_ordered %>
+  </div>
+
+  <div class="field">
+    <%= form.label :current_amount %>
+    <%= form.number_field :current_amount, id: :supply_current_amount %>
+  </div>
+
+  <div class="field">
+    <%= form.label :clinic_id %>
+    <%= form.text_field :clinic_id, id: :supply_clinic_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

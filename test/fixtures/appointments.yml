@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  clinic: one
+  surgery: one
+  date: 2017-10-08
+
+two:
+  clinic: two
+  surgery: two
+  date: 2017-10-08

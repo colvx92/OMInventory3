@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  amount_used: 1
+  appointment: one
+  supply: one
+
+two:
+  amount_used: 1
+  appointment: two
+  supply: two

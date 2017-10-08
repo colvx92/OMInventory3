@@ -1,0 +1,22 @@
+<%= form_with(model: surgery, local: true) do |form| %>
+  <% if surgery.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(surgery.errors.count, "error") %> prohibited this surgery from being saved:</h2>
+
+      <ul>
+      <% surgery.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :surgery_name %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

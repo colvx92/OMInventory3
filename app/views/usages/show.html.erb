@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Amount used:</strong>
+  <%= @usage.amount_used %>
+</p>
+
+<p>
+  <strong>Appointment:</strong>
+  <%= @usage.appointment %>
+</p>
+
+<p>
+  <strong>Supply:</strong>
+  <%= @usage.supply %>
+</p>
+
+<%= link_to 'Edit', edit_usage_path(@usage) %> |
+<%= link_to 'Back', usages_path %>
